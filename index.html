@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJADVICE Construction Management - ผู้นำด้านการบริหารและควบคุมงานก่อสร้าง</title>
+  <meta name="description" content="ผู้นำด้านการบริหารและควบคุมงานก่อสร้าง (Construction Management - CM) และที่ปรึกษาโครงการระดับสากล ทำหน้าที่ตัวแทนเจ้าของโครงการ ควบคุมคุณภาพและงบประมาณอย่างโปร่งใส" />
+  <meta property="og:title" content="AJADVICE Construction Management" />
+  <meta property="og:description" content="ผู้นำด้านการบริหารและควบคุมงานก่อสร้าง (Construction Management - CM) และที่ปรึกษาโครงการระดับสากล" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Google Material Symbols Outlined -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#673903',
+              dark: '#4c2800',
+              deep: '#6b3c06',
+              light: '#83501a',
+              container: '#ffdcc0',
+              accent: '#ffca9d'
+            }
+          },
+          fontFamily: {
+            space: ['Arial', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'Arial', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #1b1b1b;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-space, h1, h2, h3, h4, h5, h6 {
+      font-family: Arial, sans-serif !important;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+      line-height: 1;
+      display: inline-block;
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .modal-content-anim {
+      animation: fadeIn 0.2s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#f9f9f9] text-[#1b1b1b] selection:bg-[#673903] selection:text-white">
+
+  <!-- ========================================== -->
+  <!-- 1. STICKY HEADER & RESPONSIVE NAVIGATION    -->
+  <!-- ========================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#f9f9f9]/98 backdrop-blur-md shadow-[0_2px_10px_rgba(0,0,0,0.08)] border-b border-[#e2e2e2]">
+    <!-- Top Utility Contact Bar -->
+    <div class="bg-[#6b3c06] text-[#ffffff] border-b border-[#ffffff]/15">
+      <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-9 text-[12px] font-medium">
+        <div class="flex items-center gap-3 sm:gap-6">
+          <a href="tel:0814587436" class="flex items-center gap-1.5 text-[#ffca9d] hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-[15px]">call</span>
+            <span class="text-white font-space font-semibold">081-458-7436</span>
+          </a>
+          <span class="text-white/30 hidden xs:inline">|</span>
+          <a href="mailto:Ajapattaya3697@gmail.com" class="hidden sm:flex items-center gap-1.5 text-[#ffca9d] hover:text-white transition-colors">
+            <span class="material-symbols-outlined text-[15px]">mail</span>
+            <span class="text-white">Ajapattaya3697@gmail.com</span>
+          </a>
+        </div>
+        <div class="flex items-center gap-3 text-xs text-[#ffca9d]">
+          <span class="hidden md:inline">
+            <span class="text-white/60">เวลาทำการ:</span> จ.-ส. 08:30 - 17:30 น.
+          </span>
+          <span class="bg-[#83501a] text-white px-2 py-0.5 rounded text-[11px] font-semibold flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            CM &amp; QA/QC
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="h-[68px] sm:h-20 max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <button onclick="navigateTo('home')" class="flex items-center gap-2.5 sm:gap-3 text-left focus:outline-none cursor-pointer group">
+        <img 
+          src="https://lh3.googleusercontent.com/aida/AEtjO1WEZmG7mrFlyaVvHzS-SQBigdWLtakm4i6PSS_lRsEqWtzThZiMGtTF9q_Fh4TJktmLTnLeYev13pBLlKR2RvghKMz97A5Io4OR6Ph_HSVORU16vakuFrn0nQxOpf6y9O4X3O9uimiohYWOBFxDtCXrTFafHRVKzGKIA30Jfml0m7rvl6_fwWW7lEI3w4r9O1LSqqpBJUgHToUyYTsmu5aFCCmfpQTsdN6Fh4Qkj1OmoxN3IaQgl5bkNyc" 
+          alt="AJADVICE Logo" 
+          class="h-9 sm:h-11 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+          onerror="this.style.display='none'"
+        />
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="font-space font-bold text-lg sm:text-2xl text-[#1b1b1b] tracking-tight leading-none group-hover:text-[#673903] transition-colors">AJADVICE</span>
+            <span class="hidden xs:inline-block bg-[#673903]/10 text-[#673903] text-[10px] font-space font-bold px-1.5 py-0.5 rounded">CM</span>
+          </div>
+          <span class="text-[10px] sm:text-[11px] font-space uppercase tracking-wider text-[#673903] font-semibold leading-tight">Construction Management</span>
+        </div>
+      </button>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-4 lg:gap-7 h-full font-medium text-[14px] lg:text-[15px]">
+        <button id="nav-btn-home" onclick="navigateTo('home')" class="nav-desktop-btn transition-all py-2 px-1 cursor-pointer flex items-center gap-1.5 text-[#673903] font-bold border-b-2 border-[#673903]">
+          <span class="material-symbols-outlined text-[18px]">home</span>
+          <span>หน้าหลัก</span>
+        </button>
+        <button id="nav-btn-about" onclick="navigateTo('about')" class="nav-desktop-btn transition-all py-2 px-1 cursor-pointer flex items-center gap-1.5 text-[#534439] hover:text-[#1b1b1b]">
+          <span class="material-symbols-outlined text-[18px]">info</span>
+          <span>เกี่ยวกับ</span>
+        </button>
+        <button id="nav-btn-portfolio" onclick="navigateTo('portfolio')" class="nav-desktop-btn transition-all py-2 px-1 cursor-pointer flex items-center gap-1.5 text-[#534439] hover:text-[#1b1b1b]">
+          <span class="material-symbols-outlined text-[18px]">domain_verification</span>
+          <span>ผลงาน</span>
+        </button>
+
+        <!-- Current Projects Dropdown -->
+        <div class="relative h-full flex items-center" id="nav-dropdown-wrapper">
+          <button onclick="toggleDropdown()" class="nav-desktop-btn flex items-center gap-1 py-2 px-1 cursor-pointer transition-all text-[#534439] hover:text-[#1b1b1b]">
+            <span class="material-symbols-outlined text-[18px]">apartment</span>
+            <span>โครงการปัจจุบัน</span>
+            <span class="material-symbols-outlined text-[18px] transition-transform duration-200" id="dropdown-chevron">expand_more</span>
+          </button>
+          <div id="desktop-dropdown-menu" class="hidden absolute left-0 top-[60px] sm:top-[68px] w-72 bg-white shadow-[0_12px_28px_rgba(0,0,0,0.15)] rounded-md border border-[#e2e2e2] py-2 z-50">
+            <div class="px-4 py-1 text-[11px] font-bold uppercase tracking-wider text-[#857467] border-b border-[#eeeeee] mb-1">
+              เลือกหมวดหมู่โครงการปัจจุบัน
+            </div>
+            <button onclick="navigateTo('current-housing'); toggleDropdown(false);" class="w-full text-left flex items-start gap-3 px-4 py-3 hover:bg-[#f3f3f3] transition-colors cursor-pointer">
+              <span class="material-symbols-outlined text-[#673903] text-[22px] mt-0.5">villa</span>
+              <div class="flex flex-col">
+                <span class="font-bold text-[14px] text-[#1b1b1b]">โครงการบ้านเดี่ยว</span>
+                <span class="text-[12px] text-[#616363]">พรีเมียมเรสซิเดนซ์ &amp; พูลวิลล่า (Solvani)</span>
+              </div>
+            </button>
+            <div class="h-px bg-[#eeeeee] my-1"></div>
+            <button onclick="navigateTo('current-condo'); toggleDropdown(false);" class="w-full text-left flex items-start gap-3 px-4 py-3 hover:bg-[#f3f3f3] transition-colors cursor-pointer">
+              <span class="material-symbols-outlined text-[#673903] text-[22px] mt-0.5">location_city</span>
+              <div class="flex flex-col">
+                <span class="font-bold text-[14px] text-[#1b1b1b]">โครงการคอนโดมิเนียม</span>
+                <span class="text-[12px] text-[#616363]">อาคารสูง &amp; รีสอร์ต (Pattaya, Phuket)</span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Right CTAs -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="openQuoteModal()" class="inline-flex items-center gap-1.5 sm:gap-2 bg-[#673903] hover:bg-[#83501a] text-white px-3.5 sm:px-4 py-2 rounded-sm font-semibold text-[12px] sm:text-[13px] transition-all shadow-sm cursor-pointer hover:shadow-md active:translate-y-0.5">
+          <span class="material-symbols-outlined text-[17px] sm:text-[18px]">assignment</span>
+          <span class="hidden sm:inline">ติดต่อเรา / ปรึกษาโครงการ</span>
+          <span class="sm:hidden">ปรึกษาโครงการ</span>
+        </button>
+        <button onclick="toggleMobileMenu()" class="md:hidden flex items-center gap-1 bg-[#eeeeee] hover:bg-[#e2e2e2] text-[#1b1b1b] px-2.5 py-1.5 rounded-sm border border-[#e2e2e2] cursor-pointer" aria-label="Toggle Menu">
+          <span class="material-symbols-outlined text-[20px]" id="mobile-menu-icon">menu</span>
+          <span class="text-xs font-semibold">เมนู</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Quick-Nav Strip -->
+    <div class="md:hidden bg-white border-t border-[#e2e2e2] px-3 py-1.5 flex items-center justify-between overflow-x-auto scrollbar-none gap-2 text-xs">
+      <button onclick="navigateTo('home')" id="mob-strip-home" class="mob-strip-btn flex items-center gap-1 px-2.5 py-1 rounded whitespace-nowrap cursor-pointer transition-colors bg-[#673903] text-white font-semibold">
+        <span class="material-symbols-outlined text-[15px]">home</span>
+        <span>หน้าหลัก</span>
+      </button>
+      <button onclick="navigateTo('about')" id="mob-strip-about" class="mob-strip-btn flex items-center gap-1 px-2.5 py-1 rounded whitespace-nowrap cursor-pointer transition-colors text-[#534439] hover:bg-[#eeeeee]">
+        <span class="material-symbols-outlined text-[15px]">info</span>
+        <span>เกี่ยวกับ</span>
+      </button>
+      <button onclick="navigateTo('portfolio')" id="mob-strip-portfolio" class="mob-strip-btn flex items-center gap-1 px-2.5 py-1 rounded whitespace-nowrap cursor-pointer transition-colors text-[#534439] hover:bg-[#eeeeee]">
+        <span class="material-symbols-outlined text-[15px]">domain_verification</span>
+        <span>ผลงาน</span>
+      </button>
+      <button onclick="navigateTo('current-housing')" id="mob-strip-current-housing" class="mob-strip-btn flex items-center gap-1 px-2.5 py-1 rounded whitespace-nowrap cursor-pointer transition-colors text-[#534439] hover:bg-[#eeeeee]">
+        <span class="material-symbols-outlined text-[15px]">villa</span>
+        <span>บ้าน</span>
+      </button>
+      <button onclick="navigateTo('current-condo')" id="mob-strip-current-condo" class="mob-strip-btn flex items-center gap-1 px-2.5 py-1 rounded whitespace-nowrap cursor-pointer transition-colors text-[#534439] hover:bg-[#eeeeee]">
+        <span class="material-symbols-outlined text-[15px]">location_city</span>
+        <span>คอนโด</span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-white border-t border-[#e2e2e2] px-5 py-4 flex flex-col gap-3 shadow-2xl">
+      <div class="text-[11px] font-bold uppercase tracking-wider text-[#857467] pb-1 border-b border-[#eeeeee]">
+        เมนูนำทางหลัก
+      </div>
+      <button onclick="navigateTo('home'); toggleMobileMenu(false);" class="flex items-center gap-3 text-left py-2 px-3 rounded text-[15px] font-medium text-[#1b1b1b] hover:bg-[#f3f3f3]">
+        <span class="material-symbols-outlined text-[#673903]">home</span>
+        <span>หน้าหลัก (Home)</span>
+      </button>
+      <button onclick="navigateTo('about'); toggleMobileMenu(false);" class="flex items-center gap-3 text-left py-2 px-3 rounded text-[15px] font-medium text-[#1b1b1b] hover:bg-[#f3f3f3]">
+        <span class="material-symbols-outlined text-[#673903]">info</span>
+        <span>เกี่ยวกับ AJADVICE (About Us)</span>
+      </button>
+      <button onclick="navigateTo('portfolio'); toggleMobileMenu(false);" class="flex items-center gap-3 text-left py-2 px-3 rounded text-[15px] font-medium text-[#1b1b1b] hover:bg-[#f3f3f3]">
+        <span class="material-symbols-outlined text-[#673903]">domain_verification</span>
+        <span>ผลงานโครงการทั้งหมด (Portfolio)</span>
+      </button>
+      <div class="pt-2 border-t border-[#eeeeee] flex flex-col gap-1.5">
+        <div class="text-[11px] uppercase font-bold text-[#616363] tracking-wider mb-1">โครงการปัจจุบัน (Active Projects)</div>
+        <button onclick="navigateTo('current-housing'); toggleMobileMenu(false);" class="flex items-center gap-3 text-left py-2 px-3 rounded text-[14px] text-[#1b1b1b] hover:bg-[#f3f3f3]">
+          <span class="material-symbols-outlined text-[#673903]">villa</span>
+          <span>โครงการบ้านเดี่ยว (Solvani)</span>
+        </button>
+        <button onclick="navigateTo('current-condo'); toggleMobileMenu(false);" class="flex items-center gap-3 text-left py-2 px-3 rounded text-[14px] text-[#1b1b1b] hover:bg-[#f3f3f3]">
+          <span class="material-symbols-outlined text-[#673903]">location_city</span>
+          <span>โครงการคอนโดมิเนียม (Pattaya, Phuket)</span>
+        </button>
+      </div>
+      <button onclick="toggleMobileMenu(false); openQuoteModal();" class="mt-2 w-full bg-[#673903] hover:bg-[#83501a] text-white py-2.5 rounded-sm font-semibold text-[14px] flex items-center justify-center gap-2 cursor-pointer shadow">
+        <span class="material-symbols-outlined text-[18px]">assignment</span>
+        <span>ขอใบเสนอราคา / ปรึกษาวิศวกร</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 2. MAIN APPLICATION CONTENT CONTAINER       -->
+  <!-- ========================================== -->
+  <main class="flex-1 w-full pt-[140px] md:pt-[116px]">
+    
+    <!-- PAGE 1: HOME VIEW -->
+    <div id="view-home" class="page-view flex flex-col w-full">
+      <section class="relative w-full bg-[#f9f9f9] border-b border-[#e2e2e2] pt-8 pb-16 lg:py-20 overflow-hidden">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 flex flex-col gap-5">
+              <div class="inline-flex items-center gap-2 self-start bg-[#eeeeee] text-[#673903] px-3.5 py-1 rounded-sm text-[11px] font-space font-bold tracking-widest uppercase">
+                <span class="w-2 h-2 rounded-full bg-[#673903] animate-pulse"></span>
+                ESTABLISHED MARCH 15, 2022 • CM &amp; CONSULTING
+              </div>
+              <h1 class="font-space text-3xl sm:text-4xl lg:text-[46px] lg:leading-[54px] font-bold text-[#1b1b1b] tracking-tight">
+                ควบคุมมาตรฐาน<br />
+                การบริหารงานก่อสร้าง<br />
+                ด้วยความเป็นมืออาชีพและ<br />
+                โปร่งใส
+              </h1>
+              <p class="text-[15px] sm:text-[16px] text-[#534439] leading-relaxed max-w-xl">
+                AJADVICE มุ่งมั่นในการเป็นที่ปรึกษาและควบคุมงานก่อสร้าง (Construction Management - CM) เคียงข้างผู้พัฒนาโครงการ ตั้งแต่ขั้นตอนวางแผน บริหารต้นทุน ควบคุมคุณภาพ ไปจนถึงส่งมอบงานสมบูรณ์แบบ
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div class="bg-white p-3 rounded-sm border border-[#e2e2e2] shadow-xs flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[#673903] text-[20px]">trending_up</span>
+                  <div class="text-[12px] font-semibold text-[#1b1b1b] leading-tight">Project Planning &amp; Control</div>
+                </div>
+                <div class="bg-white p-3 rounded-sm border border-[#e2e2e2] shadow-xs flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[#673903] text-[20px]">verified</span>
+                  <div class="text-[12px] font-semibold text-[#1b1b1b] leading-tight">Cost &amp; Quality Assurance</div>
+                </div>
+                <div class="bg-white p-3 rounded-sm border border-[#e2e2e2] shadow-xs flex items-center gap-2.5">
+                  <span class="material-symbols-outlined text-[#673903] text-[20px]">shield</span>
+                  <div class="text-[12px] font-semibold text-[#1b1b1b] leading-tight">Owner's Representation</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 pt-2">
+                <button onclick="openQuoteModal()" class="bg-[#673903] hover:bg-[#83501a] text-white px-6 py-3 rounded-sm font-semibold text-[14px] transition-all shadow-sm flex items-center gap-2 cursor-pointer active:translate-y-0.5">
+                  <span class="material-symbols-outlined text-[18px]">assignment</span>
+                  <span>ปรึกษาโครงการ / ขอใบเสนอราคา</span>
+                </button>
+                <button onclick="navigateTo('portfolio')" class="border border-[#857467] hover:bg-[#eeeeee] text-[#1b1b1b] px-5 py-3 rounded-sm font-semibold text-[14px] transition-all cursor-pointer">
+                  ดูผลงานที่ผ่านมา
+                </button>
+              </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+              <div class="relative rounded-md overflow-hidden shadow-xl aspect-[4/3] bg-[#eeeeee] border border-[#e2e2e2]">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIjxowfZPgHl_5Ba8Z3zkP57R7RaVXjzfkp_FiHW1Oo1BhOmqRIMIOKy6k_TsTd5YpFRkxdOhrSWC2B2vu24M2DIZ_AOWtXF3WD_5wzNVjaMa617LYKXzEnnpkrFAx5t2wu-Guqp03DpAiuFcXL_SADHfRGgmwN2ZUtWoFidDMVUywwxIybk7FnkhK0gcSAYkzaDFNyAIZ7Sy8zR04gZgtFZYlxKalWYlAY_FMC30croiKTwoFjLEb-DOhV2aVgJHc62pK1iIJNZ5fOQ" alt="Site Engineers" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 text-white">
+                  <span class="font-space text-[10px] uppercase font-bold tracking-widest text-[#ffca9d] mb-1">ENGINEERING RIGOR</span>
+                  <p class="text-[14px] font-medium leading-snug text-white">"การควบคุมคุณภาพที่เข้มงวด คือหัวใจของความคุ้มค่าและความปลอดภัยในทุกมิติ"</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+            <div class="bg-white p-5 rounded-sm border border-[#e2e2e2] shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-sm bg-[#ffdcc0]/40 text-[#673903] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">calendar_today</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-space text-[22px] font-bold text-[#1b1b1b]">15 มีนาคม 2565</span>
+                <span class="text-[12px] text-[#616363]">วันก่อตั้งบริษัท (ESTABLISHED)</span>
+              </div>
+            </div>
+            <div class="bg-white p-5 rounded-sm border border-[#e2e2e2] shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-sm bg-[#ffdcc0]/40 text-[#673903] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">task_alt</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-space text-[22px] font-bold text-[#1b1b1b]">100%</span>
+                <span class="text-[12px] text-[#616363]">ส่งมอบตรงตามมาตรฐานวิศวกรรม</span>
+              </div>
+            </div>
+            <div class="bg-white p-5 rounded-sm border border-[#e2e2e2] shadow-xs flex items-center gap-4">
+              <div class="w-12 h-12 rounded-sm bg-[#ffdcc0]/40 text-[#673903] flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[24px]">military_tech</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-space text-[22px] font-bold text-[#1b1b1b]">QC/QA Certified</span>
+                <span class="text-[12px] text-[#616363]">การรับรองระบบบริหารคุณภาพมาตรฐาน</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scope of Expertise: 4 Services -->
+      <section class="w-full bg-[#f9f9f9] py-16 lg:py-20 border-b border-[#e2e2e2]">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-12">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2 text-[#673903] text-[11px] font-space font-bold uppercase tracking-widest mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#673903]"></span>
+                SCOPE OF EXPERTISE
+              </div>
+              <h2 class="font-space text-2xl sm:text-3xl font-bold text-[#1b1b1b] tracking-tight">
+                ขอบเขตบริการและบทบาทหน้าที่ของ AJADVICE
+              </h2>
+            </div>
+            <button onclick="openQuoteModal()" class="text-sm font-semibold text-[#673903] hover:underline flex items-center gap-1 cursor-pointer">
+              <span>ขอข้อมูลบริการเพิ่มเติม</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="home-services-grid">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects Showcase -->
+      <section class="w-full bg-white py-16 lg:py-20 border-b border-[#e2e2e2]">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-10">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <div class="flex items-center gap-2 text-[#673903] text-[11px] font-space font-bold uppercase tracking-widest mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#673903]"></span>
+                PORTFOLIO SPOTLIGHT
+              </div>
+              <h2 class="font-space text-2xl sm:text-3xl font-bold text-[#1b1b1b] tracking-tight">
+                โครงการตัวอย่างที่ได้รับความไว้วางใจ
+              </h2>
+            </div>
+            <button onclick="navigateTo('portfolio')" class="inline-flex items-center gap-2 text-[#673903] font-semibold text-sm hover:underline cursor-pointer">
+              <span>ดูโครงการทั้งหมด (9+ โครงการ)</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="home-featured-projects">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 2: ABOUT VIEW -->
+    <div id="view-about" class="page-view hidden flex flex-col w-full">
+      <section class="relative w-full bg-[#6b3c06] text-white py-16 lg:py-24 overflow-hidden">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-10">
+          <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div class="max-w-3xl flex flex-col gap-3">
+              <div class="inline-flex items-center gap-2 self-start bg-white/10 text-[#ffca9d] px-3.5 py-1 rounded-sm text-[11px] font-space font-bold tracking-widest uppercase">
+                <span class="w-2 h-2 rounded-full bg-[#ffca9d] animate-pulse"></span>
+                ESTABLISHED 15 MARCH 2022 • CM &amp; CONSULTANT
+              </div>
+              <h1 class="font-space text-3xl sm:text-4xl lg:text-[54px] lg:leading-[62px] font-bold text-white tracking-tight">
+                เกี่ยวกับ <span class="text-[#ffca9d]">AJADVICE</span>
+              </h1>
+              <p class="text-[16px] sm:text-[18px] text-[#ffca9d] leading-relaxed max-w-2xl">
+                ผู้นำด้านการบริหารและควบคุมงานก่อสร้าง (Construction Management - CM) และที่ปรึกษาโครงการระดับสากล ทำหน้าที่ตัวแทนเจ้าของโครงการ (Owner's Representative) ปกป้องผลประโยชน์ ควบคุมคุณภาพ งบประมาณ และส่งมอบตรงตามมาตรฐานสูงสุด
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <button onclick="navigateTo('portfolio')" class="inline-flex items-center gap-2 bg-[#dfe0e0] hover:bg-white text-[#1b1b1b] px-5 py-2.5 rounded-sm font-semibold text-[14px] shadow-md transition-all cursor-pointer">
+                <span>ดูผลงานที่ผ่านมา</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+          <!-- 3 Stats Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+            <div class="bg-[#8a4c00]/80 backdrop-blur-xs p-6 rounded-sm shadow-sm flex flex-col justify-between border border-white/10">
+              <span class="font-space text-[11px] font-bold tracking-wider uppercase text-[#ffca9d] mb-2">TOTAL VALUE MANAGED</span>
+              <div class="font-space text-3xl sm:text-4xl font-bold text-white tracking-tight">12,000+ <span class="text-[18px] font-normal text-[#ffca9d]">ลบ.</span></div>
+              <p class="text-[13px] text-[#ffca9d] mt-1">มูลค่าโครงการที่ได้รับความไว้วางใจบริหาร</p>
+            </div>
+            <div class="bg-[#8a4c00]/80 backdrop-blur-xs p-6 rounded-sm shadow-sm flex flex-col justify-between border border-white/10">
+              <span class="font-space text-[11px] font-bold tracking-wider uppercase text-[#ffca9d] mb-2">CM &amp; CONSULT PROJECTS</span>
+              <div class="font-space text-3xl sm:text-4xl font-bold text-white tracking-tight">9+ <span class="text-[18px] font-normal text-[#ffca9d]">โครงการ</span></div>
+              <p class="text-[13px] text-[#ffca9d] mt-1">บริหารงานก่อสร้างสำเร็จตามแผน 100%</p>
+            </div>
+            <div class="bg-[#8a4c00]/80 backdrop-blur-xs p-6 rounded-sm shadow-sm flex flex-col justify-between border border-white/10">
+              <span class="font-space text-[11px] font-bold tracking-wider uppercase text-[#ffca9d] mb-2">ENGINEERS &amp; AUDITORS</span>
+              <div class="font-space text-3xl sm:text-4xl font-bold text-white tracking-tight">30+ <span class="text-[18px] font-normal text-[#ffca9d]">ท่าน</span></div>
+              <p class="text-[13px] text-[#ffca9d] mt-1">ทีมวิศวกรควบคุมงานและผู้ตรวจการชำนาญการ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- History & Details -->
+      <section class="w-full bg-[#f9f9f9] py-16 lg:py-20 border-b border-[#e2e2e2]">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-12">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 flex flex-col gap-4">
+              <div class="text-[#673903] text-[11px] font-space font-bold uppercase tracking-widest">FOUNDATION &amp; EVOLUTION</div>
+              <h2 class="font-space text-2xl sm:text-3xl font-bold text-[#1b1b1b]">
+                3+ ปีแห่งความเชี่ยวชาญ ผู้นำด้านการบริหารและควบคุมงานก่อสร้าง
+              </h2>
+              <p class="text-[15px] text-[#534439] leading-relaxed">
+                บริษัท เอเจนจ์ แอดไวซ์ จำกัด (AJADVICE Co., Ltd.) ก่อตั้งขึ้นเมื่อวันที่ 15 มีนาคม 2565 โดยกลุ่มผู้เชี่ยวชาญด้านวิศวกรรมโยธาและสถาปัตยกรรมระดับแนวหน้า เพื่อตอบโจทย์ความต้องการของเจ้าของโครงการที่ต้องการตัวแทนวิศวกรมืออาชีพ (Owner's Representative) ในการควบคุมมาตรฐานการก่อสร้างและงบประมาณอย่างโปร่งใส
+              </p>
+              <p class="text-[15px] text-[#534439] leading-relaxed">
+                เรามุ่งเน้นการให้บริการบริหารควบคุมงานก่อสร้าง (Construction Management - CM) และที่ปรึกษาโครงการ (Consultant) อย่างเต็มรูปแบบ โดยผสานเทคโนโลยี BIM 3D/4D และระบบการตรวจสอบ QC Inspection แบบเรียลไทม์ ทำให้สามารถควบคุมเวลา ต้นทุน และคุณภาพงานก่อสร้างได้อย่างมีประสิทธิภาพสูงสุด
+              </p>
+              <div class="bg-[#eeeeee] p-4 rounded-sm border-l-4 border-[#673903] flex items-start gap-4 mt-2">
+                <span class="material-symbols-outlined text-[#673903] text-[28px] shrink-0">workspace_premium</span>
+                <div>
+                  <div class="font-bold text-[#1b1b1b] text-sm">วิสัยทัศน์องค์กร (Corporate Vision)</div>
+                  <div class="text-xs text-[#534439] mt-1 leading-relaxed">
+                    "มุ่งสู่การเป็นบริษัทบริหารงานก่อสร้างอันดับหนึ่งที่ได้รับความไว้วางใจสูงสุดในเอเชียตะวันออกเฉียงใต้ ผ่านการกำกับดูแลด้วยจรรยาบรรณวิศวกรรม ความโปร่งใส และนวัตกรรมการจัดการที่ทันสมัย"
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Executive Profile Spotlight -->
+            <div class="lg:col-span-5 bg-white p-6 rounded-md border border-[#e2e2e2] shadow-md flex flex-col gap-4">
+              <div class="text-xs font-bold uppercase tracking-wider text-[#857467]">LEADERSHIP &amp; GOVERNANCE</div>
+              <div class="flex items-center gap-4">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIY3teJp4kCJ_QdA5IgeQkFKVTXmlR5P2hct4DZ1WEUqblR4Et-KDfh9df3-fqrhLDCEwAOXDDtWYqnwTfxFSOHtmL0EaLJVQvac5TgNPGnLhTRxBhZNFmPVASfAxYzoyMVNNQDQmzftX4s0pDB3g4Zyo5MuOk5FfUNobNo5GWVNlRtiNn-YzH8kxDFd73pEuAKALHkre_H01Psg2KnD_kkooT7WmX_r_gFvzkWabiFZjrso7Qndcuf0gLR8dyPsyzMIu6sXP-Ht3UmA" alt="คุณพงศ์ศาณติ์ พัฒนเธียร" class="w-20 h-20 rounded-full object-cover border-2 border-[#673903]" />
+                <div class="flex flex-col">
+                  <h3 class="font-space text-lg font-bold text-[#1b1b1b]">คุณพงศ์ศาณติ์ พัฒนเธียร</h3>
+                  <span class="text-xs text-[#673903] font-semibold">Managing Director / CEO &amp; ผู้ร่วมก่อตั้ง</span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between text-xs font-space bg-[#f9f9f9] p-2.5 rounded border border-[#eeeeee]">
+                <span class="text-[#857467]">EXPERIENCE</span>
+                <span class="font-bold text-[#673903]">25+ YEARS INDUSTRY LEADERSHIP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Values 4 Pillars -->
+          <div class="flex flex-col gap-6 pt-6">
+            <div class="text-center max-w-2xl mx-auto">
+              <div class="text-[#673903] text-[11px] font-space font-bold uppercase tracking-widest mb-1">CORE GOVERNANCE PILLARS</div>
+              <h2 class="font-space text-2xl sm:text-3xl font-bold text-[#1b1b1b]">เสาหลักในการดำเนินงานและควบคุมคุณภาพ</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="bg-white p-6 rounded-sm border border-[#e2e2e2] shadow-xs flex flex-col gap-3">
+                <span class="material-symbols-outlined text-[#673903] text-[32px]">verified</span>
+                <h3 class="font-space text-[17px] font-bold text-[#1b1b1b]">คุณภาพสูงสุด</h3>
+                <span class="text-[11px] uppercase tracking-wider text-[#857467] font-semibold">Supreme Quality</span>
+                <p class="text-[13px] text-[#534439] leading-relaxed">การควบคุมคุณภาพคอนกรีต เหล็กเส้น และการตรวจสอบงานโครงสร้างด้วยเกณฑ์ทดสอบวิศวกรรมเข้มงวด</p>
+              </div>
+              <div class="bg-white p-6 rounded-sm border border-[#e2e2e2] shadow-xs flex flex-col gap-3">
+                <span class="material-symbols-outlined text-[#673903] text-[32px]">health_and_safety</span>
+                <h3 class="font-space text-[17px] font-bold text-[#1b1b1b]">ความปลอดภัยสากล</h3>
+                <span class="text-[11px] uppercase tracking-wider text-[#857467] font-semibold">Safety Standards</span>
+                <p class="text-[13px] text-[#534439] leading-relaxed">ปฏิบัติตามมาตรฐานความปลอดภัยสากลอย่างเคร่งครัด ตรวจสอบสภาพเครื่องจักร นั่งร้าน และอุปกรณ์เซฟตี้ทุกวัน</p>
+              </div>
+              <div class="bg-white p-6 rounded-sm border border-[#e2e2e2] shadow-xs flex flex-col gap-3">
+                <span class="material-symbols-outlined text-[#673903] text-[32px]">model_training</span>
+                <h3 class="font-space text-[17px] font-bold text-[#1b1b1b]">ควบคุมงบประมาณ</h3>
+                <span class="text-[11px] uppercase tracking-wider text-[#857467] font-semibold">Cost Control &amp; Owner Rep</span>
+                <p class="text-[13px] text-[#534439] leading-relaxed">ตรวจสอบ BOQ จัดประกวดราคาคัดเลือกผู้รับเหมา ควบคุมงบประมาณไม่ให้บานปลายและตรวจสอบอนุมัติงวดงาน</p>
+              </div>
+              <div class="bg-white p-6 rounded-sm border border-[#e2e2e2] shadow-xs flex flex-col gap-3">
+                <span class="material-symbols-outlined text-[#673903] text-[32px]">schedule</span>
+                <h3 class="font-space text-[17px] font-bold text-[#1b1b1b]">ส่งมอบตรงเวลา</h3>
+                <span class="text-[11px] uppercase tracking-wider text-[#857467] font-semibold">On-Time Delivery</span>
+                <p class="text-[13px] text-[#534439] leading-relaxed">ใช้ระบบ Critical Path Method (CPM) ควบคุมไทม์ไลน์งานก่อสร้างทุกขั้นตอนอย่างแม่นยำ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 3: PORTFOLIO VIEW (COMPLETED ARCHIVES) -->
+    <div id="view-portfolio" class="page-view hidden flex flex-col w-full">
+      <section class="w-full pt-8 pb-10 border-b border-[#e2e2e2] bg-[#f9f9f9]">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-4">
+          <div class="flex flex-wrap items-center gap-2 text-[11px] font-space font-semibold uppercase tracking-wider text-[#857467]">
+            <span class="text-[#673903] font-bold">AJADVICE ENGINEERING</span>
+            <span>/</span>
+            <span>CIVIL PORTFOLIO</span>
+            <span>/</span>
+            <span>COMPLETED ARCHIVES</span>
+          </div>
+          <h1 class="font-space text-3xl sm:text-4xl font-bold text-[#1b1b1b] tracking-tight">
+            ผลงานการบริหารและควบคุมงานก่อสร้าง<br />
+            <span class="text-xl sm:text-2xl text-[#673903] font-semibold">Past CM Landmark Projects &amp; Quality Engineering Records</span>
+          </h1>
+          <p class="text-[14px] text-[#534439] max-w-3xl leading-relaxed">
+            ความภาคภูมิใจในฐานะที่ปรึกษาบริหารและควบคุมงานก่อสร้าง (Construction Management - CM) ตัวแทนเจ้าของโครงการในการพิทักษ์ผลประโยชน์ ควบคุมต้นทุนงบประมาณไม่ให้บานปลาย และตรวจสอบคุณภาพงานวิศวกรรม QC/QA อย่างเข้มงวดให้ตรงตามมาตรฐานสากล
+          </p>
+
+          <!-- Filter & Search Toolbar -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-[#e2e2e2]">
+            <div class="flex flex-wrap items-center gap-2" id="portfolio-filter-buttons">
+              <button onclick="filterPortfolio('all')" data-cat="all" class="portfolio-filter-btn px-4 py-2 rounded-xs text-[13px] font-semibold transition-all cursor-pointer bg-[#673903] text-white shadow-xs">
+                ทั้งหมด (9)
+              </button>
+              <button onclick="filterPortfolio('commercial')" data-cat="commercial" class="portfolio-filter-btn px-4 py-2 rounded-xs text-[13px] font-medium transition-all cursor-pointer bg-white border border-[#e2e2e2] text-[#1b1b1b] hover:bg-[#eeeeee]">
+                อาคารสำนักงานและพาณิชย์
+              </button>
+              <button onclick="filterPortfolio('residential')" data-cat="residential" class="portfolio-filter-btn px-4 py-2 rounded-xs text-[13px] font-medium transition-all cursor-pointer bg-white border border-[#e2e2e2] text-[#1b1b1b] hover:bg-[#eeeeee]">
+                ที่อยู่อาศัย &amp; เอสเตท
+              </button>
+              <button onclick="filterPortfolio('hospitality')" data-cat="hospitality" class="portfolio-filter-btn px-4 py-2 rounded-xs text-[13px] font-medium transition-all cursor-pointer bg-white border border-[#e2e2e2] text-[#1b1b1b] hover:bg-[#eeeeee]">
+                โรงแรมและรีสอร์ต
+              </button>
+            </div>
+            <div class="relative">
+              <input type="text" id="portfolio-search-input" oninput="handlePortfolioSearch()" placeholder="ค้นหาชื่อโครงการ / ทำเล..." class="bg-white border border-[#e2e2e2] px-3 py-1.5 pl-8 rounded-xs text-[12px] focus:outline-none focus:border-[#673903] w-48 sm:w-60" />
+              <span class="material-symbols-outlined absolute left-2 top-2 text-[16px] text-[#857467]">search</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio Grid -->
+      <section class="w-full py-12">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid-container">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 4: ACTIVE HOUSING PROJECTS (บ้านเดี่ยว & พูลวิลล่า) -->
+    <div id="view-current-housing" class="page-view hidden flex flex-col w-full">
+      <section class="w-full pt-8 pb-10 border-b border-[#e2e2e2] bg-[#f9f9f9]">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-[11px] font-space font-semibold uppercase tracking-wider text-[#857467]">
+            <span class="text-[#673903] font-bold">CURRENT PROJECTS</span>
+            <span>/</span>
+            <span>LUXURY HOUSING &amp; RESIDENCE</span>
+          </div>
+          <h1 class="font-space text-3xl sm:text-4xl font-bold text-[#1b1b1b]">โครงการบ้านเดี่ยวและพูลวิลล่าปัจจุบัน</h1>
+          <p class="text-[14px] text-[#534439] max-w-3xl leading-relaxed">
+            การกำกับดูแลงานวิศวกรรมโครงสร้าง งานสถาปัตยกรรม และงานระบบสำหรับคฤหาสน์หรูซูเปอร์ลักชัวรี ตรวจสอบมาตรฐานทุกจุดโดยทีมงานประจำหน้างาน
+          </p>
+        </div>
+      </section>
+
+      <section class="w-full py-12">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-8">
+          <div class="bg-white rounded-sm border border-[#e2e2e2] overflow-hidden shadow-sm">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+              <div class="lg:col-span-7 relative aspect-[16/10] bg-[#eeeeee]">
+                <img src="https://i.postimg.cc/BZ2dtSKh/249297.jpg" alt="Solvani" class="w-full h-full object-cover" />
+                <div class="absolute top-4 left-4 bg-emerald-700 text-white text-xs font-bold px-3 py-1 rounded-xs flex items-center gap-1.5 shadow-sm">
+                  <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                  <span>ACTIVE CONSTRUCTION AUDIT</span>
+                </div>
+              </div>
+              <div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <div class="text-xs font-space font-bold uppercase text-[#673903] mb-1">LUXURY RESIDENCE</div>
+                  <h2 class="font-space text-2xl sm:text-3xl font-bold text-[#1b1b1b]">Solvani</h2>
+                  <div class="text-xs text-[#857467] font-medium flex items-center gap-1 mt-1 mb-4">
+                    <span class="material-symbols-outlined text-[16px]">location_on</span>
+                    <span>วงแหวน - รามอินทรา, กรุงเทพฯ</span>
+                  </div>
+                  <p class="text-sm text-[#534439] leading-relaxed mb-4">คฤหาสน์หรูสไตล์ Modern Luxury 2 ชั้น พร้อมโรงจอดรถส่วนตัวขนาดใหญ่และสระว่ายน้ำระบบเกลือควบคุมอุณหภูมิ</p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-[#eeeeee]">
+                  <button onclick="openQuoteModal()" class="w-full bg-[#673903] hover:bg-[#83501a] text-white py-2.5 rounded-xs text-xs font-semibold text-center cursor-pointer transition-colors">
+                    ปรึกษาโครงการบ้าน
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAGE 5: ACTIVE CONDO PROJECTS (คอนโดมิเนียม) -->
+    <div id="view-current-condo" class="page-view hidden flex flex-col w-full">
+      <section class="w-full pt-8 pb-10 border-b border-[#e2e2e2] bg-[#f9f9f9]">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-4">
+          <div class="flex items-center gap-2 text-[11px] font-space font-semibold uppercase tracking-wider text-[#857467]">
+            <span class="text-[#673903] font-bold">CURRENT PROJECTS</span>
+            <span>/</span>
+            <span>CONDOMINIUM &amp; HIGH-RISE</span>
+          </div>
+          <h1 class="font-space text-3xl sm:text-4xl font-bold text-[#1b1b1b]">โครงการคอนโดมิเนียมปัจจุบัน</h1>
+          <p class="text-[14px] text-[#534439] max-w-3xl leading-relaxed">
+            บริหารและควบคุมงานก่อสร้างอาคารชุดพักอาศัยระดับ Low-Rise และ High-Rise ในเมืองท่องเที่ยวหลัก เช่น พัทยา และภูเก็ต กำกับดูแลโครงสร้างและระบบ MEP แบบเรียลไทม์
+          </p>
+        </div>
+      </section>
+
+      <section class="w-full py-12">
+        <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-8" id="active-condo-grid">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 3. FOOTER COMPONENT                         -->
+  <!-- ========================================== -->
+  <footer class="w-full bg-[#4c2800] text-[#dadada] border-t border-[#6b3c06] pt-16 pb-12">
+    <div class="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="flex flex-col gap-4">
+          <!-- Logo identical to header -->
+          <div class="flex items-center gap-2.5 sm:gap-3 text-left">
+            <img 
+              src="https://lh3.googleusercontent.com/aida/AEtjO1WEZmG7mrFlyaVvHzS-SQBigdWLtakm4i6PSS_lRsEqWtzThZiMGtTF9q_Fh4TJktmLTnLeYev13pBLlKR2RvghKMz97A5Io4OR6Ph_HSVORU16vakuFrn0nQxOpf6y9O4X3O9uimiohYWOBFxDtCXrTFafHRVKzGKIA30Jfml0m7rvl6_fwWW7lEI3w4r9O1LSqqpBJUgHToUyYTsmu5aFCCmfpQTsdN6Fh4Qkj1OmoxN3IaQgl5bkNyc" 
+              alt="AJADVICE Logo" 
+              class="h-10 w-auto object-contain"
+              onerror="this.style.display='none'"
+            />
+            <div class="flex flex-col">
+              <div class="flex items-center gap-1.5">
+                <span class="font-space font-bold text-xl text-white tracking-tight leading-none">AJADVICE</span>
+                <span class="bg-white/15 text-white text-[10px] font-space font-bold px-1.5 py-0.5 rounded">CM</span>
+              </div>
+              <span class="text-[11px] font-space uppercase tracking-wider text-[#ffca9d] font-semibold leading-tight">Construction Management</span>
+            </div>
+          </div>
+          <p class="text-[13px] text-[#ffca9d]/80 leading-relaxed">
+            ผู้นำด้านการบริหารและควบคุมงานก่อสร้าง (Construction Management - CM) ตัวแทนเจ้าของโครงการเพื่อคุณภาพสูงสุดและความคุ้มค่างบประมาณ
+          </p>
+          <div class="text-[11px] font-space text-[#ffca9d]">
+            REGISTERED: MARCH 15, 2022
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-space font-bold text-white text-[14px] uppercase tracking-wider">เมนูนำทาง</h4>
+          <div class="flex flex-col gap-2 text-[13px]">
+            <button onclick="navigateTo('home')" class="text-left text-[#ffca9d]/80 hover:text-white transition-colors cursor-pointer">หน้าหลัก (Home)</button>
+            <button onclick="navigateTo('about')" class="text-left text-[#ffca9d]/80 hover:text-white transition-colors cursor-pointer">เกี่ยวกับเรา (About AJADVICE)</button>
+            <button onclick="navigateTo('portfolio')" class="text-left text-[#ffca9d]/80 hover:text-white transition-colors cursor-pointer">ผลงานที่ผ่านมา (Portfolio)</button>
+            <button onclick="navigateTo('current-housing')" class="text-left text-[#ffca9d]/80 hover:text-white transition-colors cursor-pointer">โครงการบ้านเดี่ยว (Active Housing)</button>
+            <button onclick="navigateTo('current-condo')" class="text-left text-[#ffca9d]/80 hover:text-white transition-colors cursor-pointer">โครงการคอนโด (Active Condo)</button>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-space font-bold text-white text-[14px] uppercase tracking-wider">บริการวิศวกรรม</h4>
+          <div class="flex flex-col gap-2 text-[13px] text-[#ffca9d]/80">
+            <div>• บริหารควบคุมงานก่อสร้าง (CM)</div>
+            <div>• ตัวแทนเจ้าของโครงการ (Owner Rep)</div>
+            <div>• ตรวจสอบงบประมาณและ BOQ</div>
+            <div>• ตรวจรับมอบงาน Defect Auditing</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <h4 class="font-space font-bold text-white text-[14px] uppercase tracking-wider">ติดต่อสำนักงานใหญ่</h4>
+          <p class="text-[12px] text-[#ffca9d]/80 leading-relaxed">489/98 หมู่ที่ 2 ตำบลบ้านคลองสวน อำเภอพระสมุทรเจดีย์ จ.สมุทรปราการ 10290</p>
+          <div class="flex flex-col gap-1.5 text-[12px] text-[#ffca9d] font-space mt-1">
+            <a href="tel:0814587436" class="flex items-center gap-1.5 hover:underline">
+              <span class="material-symbols-outlined text-[15px]">call</span>
+              <span>081-458-7436</span>
+            </a>
+            <a href="mailto:Ajapattaya3697@gmail.com" class="flex items-center gap-1.5 hover:underline">
+              <span class="material-symbols-outlined text-[15px]">mail</span>
+              <span>Ajapattaya3697@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-[#6b3c06] flex flex-col sm:flex-row items-center justify-between text-[12px] text-[#ffca9d]/70 gap-4">
+        <div>© 2022 - 2026 AJADVICE Co., Ltd. All Rights Reserved.</div>
+        <div class="flex gap-4">
+          <span>Standard CM Operations</span>
+          <span>•</span>
+          <span>Thailand Council of Engineers</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 4. MODALS (Project Detail & Quote)          -->
+  <!-- ========================================== -->
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+    <div class="modal-content-anim bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-[#e2e2e2] flex flex-col relative" onclick="event.stopPropagation()">
+      <div class="sticky top-0 z-10 bg-white/95 backdrop-blur-md px-6 py-4 border-b border-[#eeeeee] flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[#673903] text-[22px]">domain_verification</span>
+          <div>
+            <span class="text-[11px] font-space font-bold uppercase tracking-wider text-[#857467]">PROJECT SPECIFICATION &amp; AUDIT RECORD</span>
+            <h2 id="modal-project-title" class="font-space text-[18px] sm:text-[20px] font-bold text-[#1b1b1b]">Project Title</h2>
+          </div>
+        </div>
+        <button onclick="closeProjectModal()" class="p-1.5 text-[#534439] hover:text-[#1b1b1b] hover:bg-[#eeeeee] rounded-full transition-colors cursor-pointer">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+
+      <div class="p-6 flex flex-col gap-6" id="modal-project-body">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Quote & Consultation Modal -->
+  <div id="quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+    <div class="modal-content-anim bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[92vh] overflow-y-auto border border-[#e2e2e2] flex flex-col" onclick="event.stopPropagation()">
+      <div class="sticky top-0 z-10 bg-[#673903] text-white px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[#ffca9d] text-[24px]">assignment</span>
+          <div>
+            <h2 class="font-space text-[18px] font-bold">ติดต่อเรา / ขอใบเสนอราคา &amp; ปรึกษาโครงการ</h2>
+            <p class="text-[12px] text-[#ffca9d]">AJADVICE Construction Management</p>
+          </div>
+        </div>
+        <button onclick="closeQuoteModal()" class="p-1.5 text-white/80 hover:text-white hover:bg-white/10 rounded-full transition-colors cursor-pointer">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
+
+      <div id="quote-modal-body" class="p-6">
+        <form onsubmit="handleQuoteSubmit(event)" class="flex flex-col gap-5">
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-[#857467] mb-2">1. ประเภทโครงการที่ต้องการคำปรึกษา</label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <button type="button" onclick="setQuoteType('บ้านเดี่ยวและพูลวิลล่า')" id="qtype-1" class="qtype-btn p-2.5 text-xs font-semibold rounded-sm border text-center transition-all bg-[#673903] text-white border-[#673903] shadow-xs cursor-pointer">บ้านเดี่ยว/พูลวิลล่า</button>
+              <button type="button" onclick="setQuoteType('อาคารชุด/คอนโดมิเนียม')" id="qtype-2" class="qtype-btn p-2.5 text-xs font-medium rounded-sm border text-center transition-all bg-[#f9f9f9] text-[#1b1b1b] border-[#e2e2e2] hover:bg-[#eeeeee] cursor-pointer">คอนโดมิเนียม</button>
+              <button type="button" onclick="setQuoteType('อาคารสำนักงาน/พาณิชย์')" id="qtype-3" class="qtype-btn p-2.5 text-xs font-medium rounded-sm border text-center transition-all bg-[#f9f9f9] text-[#1b1b1b] border-[#e2e2e2] hover:bg-[#eeeeee] cursor-pointer">สำนักงาน/พาณิชย์</button>
+              <button type="button" onclick="setQuoteType('โรงแรมและรีสอร์ต')" id="qtype-4" class="qtype-btn p-2.5 text-xs font-medium rounded-sm border text-center transition-all bg-[#f9f9f9] text-[#1b1b1b] border-[#e2e2e2] hover:bg-[#eeeeee] cursor-pointer">โรงแรมและรีสอร์ต</button>
+            </div>
+            <input type="hidden" id="selected-quote-type" value="บ้านเดี่ยวและพูลวิลล่า" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#857467] mb-1.5">2. ขนาดพื้นที่ใช้สอย (ตร.ม.)</label>
+              <input type="number" id="quote-area" value="850" required class="w-full bg-[#f9f9f9] border border-[#e2e2e2] rounded-sm p-2.5 text-sm focus:border-[#673903] focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-[#857467] mb-1.5">3. งบประมาณก่อสร้าง (ล้านบาท)</label>
+              <input type="number" id="quote-budget" value="35" required class="w-full bg-[#f9f9f9] border border-[#e2e2e2] rounded-sm p-2.5 text-sm focus:border-[#673903] focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3 pt-2 border-t border-[#eeeeee]">
+            <label class="block text-xs font-bold uppercase tracking-wider text-[#857467]">4. ข้อมูลการติดต่อของผู้พัฒนาโครงการ / เจ้าของ</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input type="text" id="quote-name" placeholder="ชื่อ-นามสกุล / บริษัท *" required class="w-full bg-[#f9f9f9] border border-[#e2e2e2] rounded-sm p-2.5 text-xs focus:border-[#673903] focus:outline-none" />
+              <input type="tel" id="quote-phone" placeholder="เบอร์โทรศัพท์ติดต่อ *" required class="w-full bg-[#f9f9f9] border border-[#e2e2e2] rounded-sm p-2.5 text-xs focus:border-[#673903] focus:outline-none" />
+            </div>
+            <input type="email" id="quote-email" placeholder="อีเมล (ถ้ามี)" class="w-full bg-[#f9f9f9] border border-[#e2e2e2] rounded-sm p-2.5 text-xs focus:border-[#673903] focus:outline-none" />
+          </div>
+
+          <div class="pt-4 border-t border-[#eeeeee] flex items-center justify-between">
+            <span class="text-[11px] text-[#616363]">🔒 ข้อมูลของท่านจะถูกเก็บรักษาเป็นความลับทางการค้า</span>
+            <div class="flex gap-2">
+              <button type="button" onclick="closeQuoteModal()" class="px-4 py-2 border border-[#857467] text-[#1b1b1b] rounded-sm text-xs font-semibold cursor-pointer">ยกเลิก</button>
+              <button type="submit" class="px-6 py-2 bg-[#673903] hover:bg-[#83501a] text-white rounded-sm text-xs font-semibold cursor-pointer transition-colors shadow-xs">
+                ส่งข้อมูลขอใบเสนอราคา
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Call Button -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-2">
+    <a href="tel:0814587436" class="bg-[#673903] hover:bg-[#83501a] text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-semibold transition-all hover:scale-105 active:scale-95 group border border-white/20" title="ติดต่อด่วนสายตรงวิศวกร">
+      <span class="material-symbols-outlined text-[18px] animate-bounce">call</span>
+      <span class="hidden sm:inline">ปรึกษาวิศวกร: 081-458-7436</span>
+      <span class="sm:hidden font-space">สายด่วน CM</span>
+    </a>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 5. APPLICATION LOGIC & JAVASCRIPT           -->
+  <!-- ========================================== -->
+  <script>
+    // --- DATABASE & MOCK DATA ---
+    const SERVICES_DATA = [
+      {
+        number: 'Service 01',
+        icon: 'engineering',
+        title: 'บริหารและควบคุมงานก่อสร้าง',
+        subtitle: '(Construction Management - CM)',
+        description: 'ดูแลควบคุมหน้างานประจำวัน ตรวจสอบขั้นตอนการก่อสร้างให้เป็นไปตามแบบวิศวกรรม มาตรฐานสากล และความปลอดภัย'
+      },
+      {
+        number: 'Service 02',
+        icon: 'analytics',
+        title: 'ที่ปรึกษาโครงการและศึกษาความเป็นไปได้',
+        subtitle: '(Project Feasibility & Consultant)',
+        description: 'วิเคราะห์ความเป็นไปได้ของโครงการ ตรวจสอบความถูกต้องของแบบแปลน และให้คำปรึกษาเชิงวิศวกรรมก่อนเริ่มงาน'
+      },
+      {
+        number: 'Service 03',
+        icon: 'request_quote',
+        title: 'ควบคุมงบประมาณ',
+        subtitle: '(COST CONTROL & Contract Management)',
+        description: 'ตรวจสอบ BOQ จัดประกวดราคาคัดเลือกผู้รับเหมา ควบคุมงบประมาณและตรวจสอบอนุมัติงวดงานเพื่อรักษาผลประโยชน์'
+      },
+      {
+        number: 'Service 04',
+        icon: 'fact_check',
+        title: 'ตรวจสอบคุณภาพและตรวจรับมอบงาน',
+        subtitle: '(QC/QA Inspection & Handover Defect Auditing)',
+        description: 'บริการตรวจรับบ้าน อาคาร คอนโดมิเนียม ตรวจสอบระบบวิศวกรรมทุกจุดและจัดทำเล่ม Defect รายการแก้ไข'
+      }
+    ];
+
+    const PROJECTS_DATA = [
+      {
+        id: 'planb-hq',
+        title: 'PlanB HQ',
+        category: 'commercial',
+        categoryLabel: 'อาคารสำนักงานและพาณิชย์',
+        location: 'ราชเทวี',
+        province: 'กรุงเทพฯ',
+        description: 'บริหารงานก่อสร้างอาคารสำนักงานระดับพรีเมียม ควบคุมการเทโครงสร้างคอนกรีตอัดแรง ตรวจสอบระบบ MEP อัจฉริยะ',
+        role: 'CM & Consultant',
+        owner: 'PlanB',
+        imageUrl: 'https://i.postimg.cc/hGfV3Gn4/regenerated-image-1792031751306.jpg',
+        status: 'completed',
+        floors: '22 ชั้น',
+        gfa: '28,500 ตร.ม.'
+      },
+      {
+        id: 'khun-tony-residence',
+        title: 'Khun Tony Residence',
+        category: 'residential',
+        categoryLabel: 'ที่อยู่อาศัย & เอสเตท',
+        location: 'วัฒนา',
+        province: 'กรุงเทพฯ',
+        description: 'ควบคุมงานสถาปัตยกรรมคฤหาสน์หรูซูเปอร์ลักชัวรีของเจ้าของโครงการได้ตรงตามสเปก 100%',
+        role: 'CM & QC Inspector',
+        owner: 'Khun Tony',
+        imageUrl: 'https://i.postimg.cc/kXmFX9Q5/regenerated-image-1792031748264.jpg',
+        status: 'completed',
+        floors: '3 ชั้น + ชั้นใต้ดิน',
+        gfa: '1,850 ตร.ม.'
+      },
+      {
+        id: 'ploenchit-mixed-use',
+        title: 'Ploenchit Mixed-Use',
+        category: 'commercial',
+        categoryLabel: 'อาคารสำนักงานและพาณิชย์',
+        location: 'เพลินจิต',
+        province: 'กรุงเทพฯ',
+        description: 'บริหารงานก่อสร้างและควบคุมงานโครงเหล็กช่วงกว้าง ควบคุมงบประมาณ จัดการงานสัญญาผู้รับเหมาหลัก และกำกับมาตรฐาน',
+        role: 'CM & Consultant',
+        owner: 'Capstone Asset',
+        imageUrl: 'https://i.postimg.cc/0NBqGVk6/249233.jpg',
+        status: 'completed',
+        floors: '36 ชั้น',
+        gfa: '45,000 ตร.ม.'
+      },
+      {
+        id: 'origin-play-bangsaen',
+        title: 'Origin Play Bangsaen',
+        category: 'residential',
+        categoryLabel: 'ที่อยู่อาศัย & เอสเตท',
+        location: 'แสนสุข',
+        province: 'ชลบุรี',
+        description: 'ควบคุมงานก่อสร้างคอนโดมิเนียม 33 ชั้น ดูแลงานก่อสร้างส่งห้องพัก ตรวจงานผู้รับเหมา',
+        role: 'CM & Consult',
+        owner: 'Origin Property',
+        imageUrl: 'https://i.postimg.cc/28mgZsQF/249281.jpg',
+        status: 'completed',
+        floors: '33 ชั้น',
+        units: '492 ยูนิต'
+      },
+      {
+        id: 'dusit-d2-khao-yai',
+        title: 'Dusit D2 Khao Yai',
+        category: 'hospitality',
+        categoryLabel: 'โรงแรมและรีสอร์ต',
+        location: 'เขาใหญ่',
+        province: 'นครราชสีมา',
+        description: 'บริหารงานก่อสร้างโรงแรมและรีสอร์ตสไตล์ธรรมชาติท่ามกลางขุนเขา',
+        role: 'CM & Consultant',
+        owner: 'VLX Co. Ltd.',
+        imageUrl: 'https://i.postimg.cc/2jnP3kZ4/message-Image-1791975063073.jpg',
+        status: 'completed',
+        floors: 'วิลล่า & อาคารคลับเฮาส์',
+        gfa: '14,200 ตร.ม.'
+      },
+      {
+        id: 'cinq-royal',
+        title: 'Cinq Royal',
+        category: 'residential',
+        categoryLabel: 'ที่อยู่อาศัย & เอสเตท',
+        location: 'กรุงเทพกรีฑา',
+        province: 'กรุงเทพฯ',
+        description: 'บริหารงานก่อสร้างและควบคุมงานสถาปัตยกรรม ควบคุมงบประมาณ จัดการงานระบบ ตรวจรับมอบงาน',
+        role: 'CM & QA/QC',
+        owner: 'Asset Five',
+        imageUrl: 'https://i.postimg.cc/1RDL4mqC/249283.jpg',
+        status: 'completed',
+        floors: '3 ชั้น ลักชัวรีเรสซิเดนซ์',
+        gfa: '1,200 ตร.ม./หลัง'
+      },
+      {
+        id: 'plus-connect',
+        title: 'Plus Connect',
+        category: 'residential',
+        categoryLabel: 'ที่อยู่อาศัย & เอสเตท',
+        location: 'หาดใหญ่',
+        province: 'สงขลา',
+        description: 'ที่ปรึกษาและควบคุมงานก่อสร้างอาคารชุดพักอาศัย 28 ชั้น ควบคุมงานเทคอนกรีตความแข็งแรงสูง และทดสอบระบบความปลอดภัย',
+        role: 'CM & Consult',
+        owner: 'Serene Property',
+        imageUrl: 'https://i.postimg.cc/Pf1BNXwF/249292.jpg',
+        status: 'completed',
+        floors: '28 ชั้น',
+        units: '441 ยูนิต'
+      },
+      {
+        id: 'sh24',
+        title: 'SH24',
+        category: 'residential',
+        categoryLabel: 'ที่อยู่อาศัย & เอสเตท',
+        location: 'ดุสิต',
+        province: 'กรุงเทพฯ',
+        description: 'บริหารและควบคุมงานก่อสร้างคฤหาสน์หรู ควบคุมงบประมาณ จัดการงานระบบ MEP และตรวจรับมอบงาน',
+        role: 'CM & QA/QC',
+        owner: 'SH24',
+        imageUrl: 'https://i.postimg.cc/Kctd4GMp/249293.jpg',
+        status: 'completed',
+        floors: '2 ชั้น โมเดิร์นพูลวิลล่า',
+        gfa: '950 ตร.ม.'
+      },
+      {
+        id: 'hamton',
+        title: 'Hamton',
+        category: 'residential',
+        categoryLabel: 'ที่อยู่อาศัย & เอสเตท',
+        location: 'ระยอง',
+        province: 'ระยอง',
+        description: 'ที่ปรึกษาและควบคุมงานก่อสร้างคอนโดมิเนียม ควบคุมงาน และตรวจสอบระบบอาคารสูงครบวงจร',
+        role: 'CM & Consult',
+        owner: 'Origin Property',
+        imageUrl: 'https://i.postimg.cc/NFNVYMK8/3-Hero-Shot-V1-copy.jpg',
+        status: 'completed',
+        floors: '29 ชั้น',
+        units: '380 ยูนิต'
+      },
+      {
+        id: 'solvani',
+        title: 'Solvani',
+        category: 'residential',
+        categoryLabel: 'LUXURY RESIDENCE',
+        location: 'วงแหวน - รามอินทรา',
+        province: 'กรุงเทพฯ',
+        description: 'คฤหาสน์หรูสไตล์ Modern Luxury 2 ชั้น พร้อมโรงจอดรถส่วนตัวขนาดใหญ่',
+        role: 'ที่ปรึกษาและควบคุมงานก่อสร้าง (Project CM & QA/QC Inspector)',
+        owner: 'Solvani Asset Co., Ltd.',
+        imageUrl: 'https://i.postimg.cc/BZ2dtSKh/249297.jpg',
+        status: 'active-housing',
+        floors: '2 ชั้น',
+        gfa: '850 ตร.ม.'
+      },
+      {
+        id: 'the-origin-pattaya',
+        title: 'The Origin Pattaya',
+        category: 'residential',
+        categoryLabel: 'LOW-RISE CONDOMINIUM',
+        location: 'พัทยา',
+        province: 'ชลบุรี',
+        description: 'คอนโดมิเนียม Low-Rise สูง 8 ชั้น 2 อาคาร 560 ยูนิต',
+        role: 'ที่ปรึกษาและควบคุมงานก่อสร้าง (Project CM & QA/QC Inspector)',
+        owner: 'Origin Property',
+        imageUrl: 'https://i.postimg.cc/Df1tmvXs/249308.jpg',
+        status: 'active-condo',
+        floors: 'สูง 8 ชั้น 2 อาคาร',
+        units: '560 ยูนิต'
+      },
+      {
+        id: 'so-origin-pattaya',
+        title: 'So Origin Pattaya',
+        category: 'residential',
+        categoryLabel: 'LOW-RISE CONDOMINIUM',
+        location: 'พัทยา',
+        province: 'ชลบุรี',
+        description: 'คอนโดมิเนียม Low-Rise สูง 8 ชั้น 3 อาคาร 790 ยูนิต',
+        role: 'ที่ปรึกษาและควบคุมงานก่อสร้าง (Project CM & QA/QC Inspector)',
+        owner: 'Origin Property',
+        imageUrl: 'https://i.postimg.cc/CMbWdhqC/249307.jpg',
+        status: 'active-condo',
+        floors: 'สูง 8 ชั้น 3 อาคาร',
+        units: '790 ยูนิต'
+      },
+      {
+        id: 'kathu-phuket',
+        title: 'Kathu Phuket',
+        category: 'residential',
+        categoryLabel: 'RESORT CONDOMINIUM',
+        location: 'กะทู้',
+        province: 'ภูเก็ต',
+        description: 'คอนโดมิเนียม Low-Rise สูง 8 ชั้น 3 อาคาร พร้อมสิ่งอำนวยความสะดวกสไตล์รีสอร์ต',
+        role: 'ที่ปรึกษาและควบคุมงานก่อสร้าง (Project CM & QA/QC Inspector)',
+        owner: 'Andaman Development Group',
+        imageUrl: 'https://i.postimg.cc/vZ8rfzST/regenerated-image-1792032748637.jpg',
+        status: 'active-condo',
+        floors: 'สูง 8 ชั้น 3 อาคาร',
+        units: '430 ยูนิต'
+      },
+      {
+        id: 'central-headstart',
+        title: 'Central Headstart',
+        category: 'residential',
+        categoryLabel: 'MODERN RESIDENCES',
+        location: 'เมืองภูเก็ต',
+        province: 'ภูเก็ต',
+        description: 'คอนโดมิเนียม Low-Rise สูง 8 ชั้น ออกแบบตามมาตรฐานอาคารเขียวและการระบายอากาศธรรมชาติ',
+        role: 'ที่ปรึกษาและควบคุมงานก่อสร้าง (Project CM & QA/QC Inspector)',
+        owner: 'Headstart Living',
+        imageUrl: 'https://i.postimg.cc/HWbfjYy4/249310.jpg',
+        status: 'active-condo',
+        floors: 'สูง 8 ชั้น',
+        units: '220 ยูนิต'
+      }
+    ];
+
+    // --- NAVIGATION CONTROLLER ---
+    function navigateTo(pageId) {
+      document.querySelectorAll('.page-view').forEach(el => el.classList.add('hidden'));
+      const target = document.getElementById('view-' + pageId);
+      if (target) {
+        target.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Update Desktop Nav Active State
+      document.querySelectorAll('.nav-desktop-btn').forEach(btn => {
+        btn.classList.remove('text-[#673903]', 'font-bold', 'border-b-2', 'border-[#673903]');
+        btn.classList.add('text-[#534439]');
+      });
+      if (pageId === 'home') highlightNav('nav-btn-home');
+      else if (pageId === 'about') highlightNav('nav-btn-about');
+      else if (pageId === 'portfolio') highlightNav('nav-btn-portfolio');
+
+      // Update Mobile Strip Active State
+      document.querySelectorAll('.mob-strip-btn').forEach(btn => {
+        btn.classList.remove('bg-[#673903]', 'text-white', 'font-semibold');
+        btn.classList.add('text-[#534439]');
+      });
+      const mobBtn = document.getElementById('mob-strip-' + pageId);
+      if (mobBtn) {
+        mobBtn.classList.remove('text-[#534439]');
+        mobBtn.classList.add('bg-[#673903]', 'text-white', 'font-semibold');
+      }
+
+      toggleDropdown(false);
+    }
+
+    function highlightNav(btnId) {
+      const el = document.getElementById(btnId);
+      if (el) {
+        el.classList.remove('text-[#534439]');
+        el.classList.add('text-[#673903]', 'font-bold', 'border-b-2', 'border-[#673903]');
+      }
+    }
+
+    function toggleDropdown(forceState) {
+      const menu = document.getElementById('desktop-dropdown-menu');
+      const chevron = document.getElementById('dropdown-chevron');
+      const shouldOpen = forceState !== undefined ? forceState : menu.classList.contains('hidden');
+      if (shouldOpen) {
+        menu.classList.remove('hidden');
+        if (chevron) chevron.style.transform = 'rotate(180deg)';
+      } else {
+        menu.classList.add('hidden');
+        if (chevron) chevron.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function toggleMobileMenu(forceState) {
+      const drawer = document.getElementById('mobile-drawer');
+      const icon = document.getElementById('mobile-menu-icon');
+      const shouldOpen = forceState !== undefined ? forceState : drawer.classList.contains('hidden');
+      if (shouldOpen) {
+        drawer.classList.remove('hidden');
+        if (icon) icon.textContent = 'close';
+      } else {
+        drawer.classList.add('hidden');
+        if (icon) icon.textContent = 'menu';
+      }
+    }
+
+    // --- RENDER DYNAMIC SECTIONS ---
+    function renderHomeServices() {
+      const container = document.getElementById('home-services-grid');
+      if (!container) return;
+      container.innerHTML = SERVICES_DATA.map(s => `
+        <div class="bg-white p-6 rounded-sm border border-[#e2e2e2] hover:border-[#673903] transition-all flex flex-col justify-between group shadow-xs">
+          <div>
+            <div class="flex items-center justify-between text-xs text-[#857467] font-space mb-4">
+              <span>${s.number}</span>
+              <span class="material-symbols-outlined text-[#673903] text-[24px] group-hover:scale-110 transition-transform">${s.icon}</span>
+            </div>
+            <h3 class="font-space font-bold text-[16px] text-[#1b1b1b]">${s.title}</h3>
+            <div class="text-[12px] text-[#673903] font-medium mt-0.5 mb-3">${s.subtitle}</div>
+            <p class="text-[13px] text-[#534439] leading-relaxed">${s.description}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderHomeFeaturedProjects() {
+      const container = document.getElementById('home-featured-projects');
+      if (!container) return;
+      const featured = PROJECTS_DATA.filter(p => p.status === 'completed').slice(0, 3);
+      container.innerHTML = featured.map(p => renderProjectCardHtml(p)).join('');
+    }
+
+    let currentPortfolioCategory = 'all';
+    function renderPortfolioGrid(category = 'all', searchQuery = '') {
+      const container = document.getElementById('portfolio-grid-container');
+      if (!container) return;
+
+      let list = PROJECTS_DATA.filter(p => p.status === 'completed');
+      if (category !== 'all') {
+        list = list.filter(p => p.category === category);
+      }
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        list = list.filter(p => p.title.toLowerCase().includes(q) || p.owner.toLowerCase().includes(q) || p.location.toLowerCase().includes(q) || p.province.toLowerCase().includes(q));
+      }
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="col-span-full bg-white p-12 text-center rounded-sm border border-[#e2e2e2]">
+            <span class="material-symbols-outlined text-[48px] text-[#857467] mb-2">search_off</span>
+            <h3 class="font-space text-lg font-bold text-[#1b1b1b]">ไม่พบโครงการที่ค้นหา</h3>
+            <p class="text-xs text-[#616363] mt-1">ลองเปลี่ยนคำค้นหา หรือเลือกหมวดหมู่อื่น</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(p => renderProjectCardHtml(p)).join('');
+    }
+
+    function filterPortfolio(cat) {
+      currentPortfolioCategory = cat;
+      document.querySelectorAll('.portfolio-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = 'portfolio-filter-btn px-4 py-2 rounded-xs text-[13px] font-semibold transition-all cursor-pointer bg-[#673903] text-white shadow-xs';
+        } else {
+          btn.className = 'portfolio-filter-btn px-4 py-2 rounded-xs text-[13px] font-medium transition-all cursor-pointer bg-white border border-[#e2e2e2] text-[#1b1b1b] hover:bg-[#eeeeee]';
+        }
+      });
+      const q = document.getElementById('portfolio-search-input').value;
+      renderPortfolioGrid(cat, q);
+    }
+
+    function handlePortfolioSearch() {
+      const q = document.getElementById('portfolio-search-input').value;
+      renderPortfolioGrid(currentPortfolioCategory, q);
+    }
+
+    function renderProjectCardHtml(p) {
+      return `
+        <div onclick="openProjectModal('${p.id}')" class="group bg-white rounded-sm border border-[#e2e2e2] overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col cursor-pointer hover:border-[#673903]/40">
+          <div class="relative aspect-[16/10] overflow-hidden bg-[#eeeeee]">
+            <img src="${p.imageUrl}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+            <div class="absolute top-3 left-3 bg-[#1b1b1b]/80 backdrop-blur-xs text-[#ffca9d] text-[10px] font-space font-bold uppercase tracking-widest px-2.5 py-1 rounded-xs">
+              ${p.categoryLabel}
+            </div>
+            <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs text-[#1b1b1b] text-[11px] font-semibold px-2 py-0.5 rounded-xs flex items-center gap-1 shadow-xs">
+              <span class="material-symbols-outlined text-[14px] text-[#673903]">location_on</span>
+              <span>${p.location}, ${p.province}</span>
+            </div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[12px] text-[#857467] font-space font-medium mb-1">OWNER: ${p.owner}</div>
+              <h3 class="font-space text-[18px] font-bold text-[#1b1b1b] group-hover:text-[#673903] transition-colors">${p.title}</h3>
+              <p class="text-[13px] text-[#534439] mt-2 line-clamp-2 leading-relaxed">${p.description}</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#eeeeee] flex items-center justify-between text-[12px]">
+              <span class="text-[#616363] font-medium">${p.floors || p.gfa || ''}</span>
+              <span class="text-[#673903] font-bold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                <span>ตรวจสอบข้อมูล</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderActiveCondoGrid() {
+      const container = document.getElementById('active-condo-grid');
+      if (!container) return;
+      const list = PROJECTS_DATA.filter(p => p.status === 'active-condo');
+      container.innerHTML = list.map(p => `
+        <div class="bg-white rounded-sm border border-[#e2e2e2] overflow-hidden shadow-xs flex flex-col justify-between hover:border-[#673903] transition-all">
+          <div>
+            <div class="relative aspect-[16/10] bg-[#eeeeee]">
+              <img src="${p.imageUrl}" alt="${p.title}" class="w-full h-full object-cover" />
+              <div class="absolute top-3 left-3 bg-[#673903] text-white text-[11px] font-space font-bold px-2.5 py-1 rounded-xs">
+                ACTIVE AUDIT
+              </div>
+              <div class="absolute bottom-3 right-3 bg-white/95 backdrop-blur-xs text-[#1b1b1b] text-xs font-semibold px-2 py-0.5 rounded-xs">
+                ${p.location}, ${p.province}
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-space font-semibold text-[#857467]">${p.owner} • ${p.floors} (${p.units})</div>
+              <h3 class="font-space text-xl font-bold text-[#1b1b1b] mt-1 mb-2">${p.title}</h3>
+              <p class="text-xs text-[#534439] leading-relaxed mb-4">${p.description}</p>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0">
+            <button onclick="openQuoteModal()" class="w-full bg-[#673903] hover:bg-[#83501a] text-white py-2 rounded-xs text-xs font-semibold text-center cursor-pointer transition-colors">
+              ขอใบเสนอราคา
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // --- MODAL CONTROLLERS ---
+    function openProjectModal(projectId) {
+      const p = PROJECTS_DATA.find(x => x.id === projectId);
+      if (!p) return;
+
+      document.getElementById('modal-project-title').textContent = p.title;
+      const body = document.getElementById('modal-project-body');
+      
+      body.innerHTML = `
+        <div class="relative rounded-md overflow-hidden aspect-[16/9] w-full bg-[#eeeeee] shadow-sm">
+          <img src="${p.imageUrl}" alt="${p.title}" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-5 text-white">
+            <div class="flex items-center gap-2 text-xs font-semibold text-[#ffca9d]">
+              <span class="material-symbols-outlined text-[16px]">location_on</span>
+              <span>${p.location}, ${p.province}</span>
+              <span>•</span>
+              <span>เจ้าของโครงการ: ${p.owner}</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold font-space mt-1 text-white">${p.title}</h3>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#f9f9f9] p-4 rounded-md border border-[#eeeeee]">
+          <div>
+            <span class="text-[11px] text-[#857467] font-medium block">ประเภทโครงการ</span>
+            <span class="text-[13px] font-semibold text-[#1b1b1b]">${p.categoryLabel || 'งานบริหารก่อสร้าง'}</span>
+          </div>
+          <div>
+            <span class="text-[11px] text-[#857467] font-medium block">ขนาด / ความสูง</span>
+            <span class="text-[13px] font-semibold text-[#1b1b1b]">${p.floors || p.gfa || 'ตามมาตรฐาน'}</span>
+          </div>
+          <div>
+            <span class="text-[11px] text-[#857467] font-medium block">บทบาท AJADVICE</span>
+            <span class="text-[13px] font-semibold text-[#673903]">${p.role}</span>
+          </div>
+          <div>
+            <span class="text-[11px] text-[#857467] font-medium block">สถานะปัจจุบัน</span>
+            <span class="text-[13px] font-semibold text-emerald-700 flex items-center gap-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+              ${p.status === 'completed' ? 'ส่งมอบงานสมบูรณ์ 100%' : 'กำลังก่อสร้าง (Active Audit)'}
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h4 class="font-bold text-[15px] text-[#1b1b1b] flex items-center gap-2">
+            <span class="material-symbols-outlined text-[#673903] text-[18px]">description</span>
+            <span>ขอบเขตการบริหารจัดการและควบคุมงานวิศวกรรม (CM Scope)</span>
+          </h4>
+          <p class="text-[14px] leading-relaxed text-[#534439] bg-white p-4 rounded-md border border-[#eeeeee]">
+            ${p.description} บริษัท เอเจนจ์ แอดไวซ์ จำกัด ทำหน้าที่ตัวแทนเจ้าของโครงการ กำกับดูแลการก่อสร้างทุกขั้นตอน ตรวจสอบข้อกำหนดแบบแปลน สัญญาจ้าง วิเคราะห์ตรวจสอบโครงสร้าง ทดสอบวัสดุ และตรวจรับมอบงานเพื่อความคุ้มค่าและคุณภาพสูงสุด
+          </p>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-4 border-t border-[#eeeeee]">
+          <button onclick="closeProjectModal()" class="px-5 py-2.5 border border-[#857467] text-[#1b1b1b] hover:bg-[#eeeeee] rounded-sm font-semibold text-xs transition-colors cursor-pointer">
+            ปิดหน้าต่าง
+          </button>
+          <button onclick="closeProjectModal(); openQuoteModalWithParam('${p.categoryLabel || p.title}');" class="px-5 py-2.5 bg-[#673903] hover:bg-[#83501a] text-white rounded-sm font-semibold text-xs transition-colors cursor-pointer flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">edit_calendar</span>
+            <span>ปรึกษาโครงการประเภทนี้</span>
+          </button>
+        </div>
+      `;
+
+      const modal = document.getElementById('project-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProjectModal() {
+      const modal = document.getElementById('project-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'unset';
+    }
+
+    function openQuoteModal() {
+      const modal = document.getElementById('quote-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openQuoteModalWithParam(typeName) {
+      setQuoteType(typeName);
+      openQuoteModal();
+    }
+
+    function closeQuoteModal() {
+      const modal = document.getElementById('quote-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = 'unset';
+    }
+
+    function setQuoteType(typeName) {
+      document.getElementById('selected-quote-type').value = typeName;
+      const types = ['บ้านเดี่ยวและพูลวิลล่า', 'อาคารชุด/คอนโดมิเนียม', 'อาคารสำนักงาน/พาณิชย์', 'โรงแรมและรีสอร์ต'];
+      types.forEach((t, idx) => {
+        const btn = document.getElementById('qtype-' + (idx + 1));
+        if (btn) {
+          if (t === typeName || (typeName.includes('บ้าน') && t.includes('บ้าน')) || (typeName.includes('คอนโด') && t.includes('คอนโด')) || (typeName.includes('สำนักงาน') && t.includes('สำนักงาน')) || (typeName.includes('โรงแรม') && t.includes('โรงแรม'))) {
+            btn.className = 'qtype-btn p-2.5 text-xs font-semibold rounded-sm border text-center transition-all bg-[#673903] text-white border-[#673903] shadow-xs cursor-pointer';
+          } else {
+            btn.className = 'qtype-btn p-2.5 text-xs font-medium rounded-sm border text-center transition-all bg-[#f9f9f9] text-[#1b1b1b] border-[#e2e2e2] hover:bg-[#eeeeee] cursor-pointer';
+          }
+        }
+      });
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const type = document.getElementById('selected-quote-type').value;
+      const area = document.getElementById('quote-area').value;
+      const budget = document.getElementById('quote-budget').value;
+      const name = document.getElementById('quote-name').value;
+      const phone = document.getElementById('quote-phone').value;
+      const refId = `AJA-${Math.floor(100000 + Math.random() * 900000)}`;
+
+      const body = document.getElementById('quote-modal-body');
+      body.innerHTML = `
+        <div class="p-8 flex flex-col items-center text-center gap-4">
+          <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[36px]">check_circle</span>
+          </div>
+          <h3 class="font-space text-2xl font-bold text-[#1b1b1b]">ส่งคำขอปรึกษาโครงการสำเร็จ</h3>
+          <p class="text-[#534439] text-sm max-w-md leading-relaxed">
+            ทีมวิศวกรผู้เชี่ยวชาญของ AJADVICE ได้รับข้อมูลโครงการของท่านแล้ว หมายเลขเอกสารอ้างอิง: <span class="font-bold text-[#673903] font-space">${refId}</span>
+          </p>
+          <div class="w-full bg-[#f9f9f9] border border-[#eeeeee] p-4 rounded-md text-left text-xs text-[#534439] flex flex-col gap-1.5">
+            <div class="font-semibold text-black">สรุปข้อมูลเบื้องต้น:</div>
+            <div>• ประเภทโครงการ: ${type}</div>
+            <div>• ขนาดพื้นที่โดยประมาณ: ${area} ตร.ม.</div>
+            <div>• งบประมาณก่อสร้างโดยประมาณ: ${budget} ล้านบาท</div>
+            <div>• ผู้ติดต่อ: ${name} (${phone})</div>
+          </div>
+          <div class="flex gap-3 mt-4">
+            <button onclick="closeQuoteModal(); location.reload();" class="px-6 py-2.5 bg-[#673903] hover:bg-[#83501a] text-white rounded-sm font-semibold text-sm transition-colors cursor-pointer shadow-sm">
+              รับทราบและปิด
+            </button>
+            <a href="tel:0814587436" class="px-6 py-2.5 border border-[#673903] text-[#673903] hover:bg-[#f3f3f3] rounded-sm font-semibold text-sm transition-colors inline-flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px]">call</span>
+              <span>โทรติดต่อวิศวกรทันที</span>
+            </a>
+          </div>
+        </div>
+      `;
+    }
+
+    // --- INITIALIZE APP ---
+    window.addEventListener('DOMContentLoaded', () => {
+      renderHomeServices();
+      renderHomeFeaturedProjects();
+      renderPortfolioGrid('all', '');
+      renderActiveCondoGrid();
+
+      // Close modal on outside click
+      window.addEventListener('click', (e) => {
+        const pModal = document.getElementById('project-modal');
+        const qModal = document.getElementById('quote-modal');
+        if (e.target === pModal) closeProjectModal();
+        if (e.target === qModal) closeQuoteModal();
+      });
+    });
+  </script>
+</body>
+</html>
